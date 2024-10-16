@@ -1,0 +1,59 @@
+.intro-wrapper {
+  height: calc(100vh - 4rem);
+  width: 100vw;
+  max-width: 80vw;
+  margin: 0 auto;
+}
+
+.intro-wrapper {
+  position: relative;
+}
+.profile-image {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: -1;
+}
+.profile-image .bg-image {
+  height: calc(100vh - 65px);
+  object-fit: cover;
+}
+.intro-content {
+  height: calc(100vh - 65px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.hello {
+  font-size: 1.75rem;
+  font-weight: 100;
+}
+.introText {
+  font-size: 3rem;
+  line-height: 1.2;
+  font-weight: 700;
+}
+.hireMeBtn button {
+  background: #fff;
+  color: #000;
+  display: flex;
+  gap: 5px;
+  align-items: center;
+  border-radius: 8px;
+  padding: 10px 15px;
+  margin-top: 15px;
+  font-size: 1.1rem;
+}
+.hireMeBtn button:hover {
+  background-color: var(--btn-bg-hover-color);
+}
+.introName {
+  color: var(--text-hover-color);
+}
+.introPara {
+  font-size: small;
+  font-weight: 100;
+  letter-spacing: 1px;
+  text-transform: capitalize;
+  color: #e2e2e2;
+}

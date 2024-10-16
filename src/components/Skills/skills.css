@@ -1,0 +1,162 @@
+.skillBars {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+}
+
+.skillBars figure {
+  position: relative;
+  overflow: hidden;
+  margin: 10px 1%;
+  /* background: #3085a3; */
+  text-align: center;
+  cursor: pointer;
+}
+
+.skillBars figure img {
+  position: relative;
+  display: block;
+  min-height: 100%;
+  max-width: 100%;
+  opacity: 0.8;
+}
+
+.skillBars figure figcaption {
+  padding: 2em;
+  color: #ffe700;
+  font-size: 1.25em;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.skillBars figure figcaption::before,
+.skillBars figure figcaption::after {
+  pointer-events: none;
+}
+
+.skillBars figure figcaption,
+.skillBars figure figcaption > a {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.skillBars figure figcaption > a {
+  z-index: 1000;
+  text-indent: 200%;
+  white-space: nowrap;
+  font-size: 0;
+  opacity: 0;
+}
+
+.skillBars figure h2 {
+  word-spacing: -0.15em;
+  font-weight: 300;
+}
+
+.skillBars figure h2 span {
+  font-weight: 800;
+}
+
+.skillBars figure h2,
+.skillBars figure p {
+  margin: 0;
+}
+
+.skillBars figure p {
+  letter-spacing: 1px;
+  font-size: 68.5%;
+}
+
+figure.skillbar {
+  background: #000;
+  border-radius: 8px;
+}
+
+figure.skillbar img {
+  /* opacity: 0.7; */
+  -webkit-transition: opacity 0.35s;
+  transition: opacity 0.35s;
+}
+
+figure.skillbar:hover img {
+  opacity: 0.4;
+}
+
+figure.skillbar figcaption::before,
+figure.skillbar figcaption::after {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  bottom: 30px;
+  left: 30px;
+  content: "";
+  opacity: 0;
+  -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+  transition: opacity 0.35s, transform 0.35s;
+}
+
+figure.skillbar figcaption::before {
+  border-top: 1px solid #fff;
+  border-bottom: 1px solid #fff;
+  -webkit-transform: scale(0, 1);
+  transform: scale(0, 1);
+}
+
+figure.skillbar figcaption::after {
+  border-right: 1px solid #fff;
+  border-left: 1px solid #fff;
+  -webkit-transform: scale(1, 0);
+  transform: scale(1, 0);
+}
+
+figure.skillbar h2 {
+  padding-top: 30%;
+  -webkit-transition: -webkit-transform 0.35s;
+  transition: transform 0.35s;
+  -webkit-transform: translate3d(0, -20px, 0);
+  transform: translate3d(0, -20px, 0);
+}
+
+figure.skillbar p {
+  padding: 20px 2.5em;
+  opacity: 0;
+  -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+  transition: opacity 0.35s, transform 0.35s;
+  -webkit-transform: translate3d(0, 20px, 0);
+  transform: translate3d(0, 20px, 0);
+}
+
+figure.skillbar:hover figcaption::before,
+figure.skillbar:hover figcaption::after {
+  opacity: 1;
+  -webkit-transform: scale(1);
+  transform: scale(1);
+}
+
+figure.skillbar:hover h2,
+figure.skillbar:hover p {
+  opacity: 1;
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+}
+
+@media screen and (max-width: 50em) {
+  .skillBars figure {
+    display: inline-block;
+    float: none;
+    margin: 10px auto;
+    width: 100%;
+  }
+}
+
+.clearfix:before,
+.clearfix:after {
+  display: table;
+  content: "";
+}
+.clearfix:after {
+  clear: both;
+}
